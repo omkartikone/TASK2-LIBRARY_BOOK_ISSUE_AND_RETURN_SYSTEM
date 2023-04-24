@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.geometry.Insets?>
+
+<VBox  spacing="5.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.codeclausetask2.IssueController" style="-fx-background-color:#20262E;">
+    <children>
+        <Button fx:id="secondaryButton" text="Go Back" onAction="#switchToPrimary" />
+        <Label text="Issue Book" style="-fx-font-size:25; -fx-font-family:Consolas; -fx-text-fill:#E9E8E8;-fx-padding:15 0 0 0"/>
+        <Label text="Enter Book Id" style="-fx-font-size:20; -fx-font-family:Consolas; -fx-text-fill:#E9E8E8;-fx-padding:30 0 0 0"/>
+        <TextField fx:id="bookid" promptText="Book Id" maxWidth="350"/>
+        <Label fx:id="alert1" style="-fx-font-size:10; -fx-font-family:Consolas; -fx-text-fill:red;"/>
+        <Label text="Enter Roll Number of student" style="-fx-font-size:20; -fx-font-family:Consolas; -fx-text-fill:#E9E8E8;"/>
+        <TextField fx:id="rollno" promptText="Roll Number" maxWidth="350"/>
+        <Label fx:id="alert2" style="-fx-font-size:10; -fx-font-family:Consolas;"/>
+        <GridPane>
+            <Button fx:id="issueSubmit" GridPane.columnIndex="14" text="Submit" onAction="#issueBook" style="-fx-font-size:15;-fx-padding:5 40 5 40" />
+        </GridPane>
+      <Label text="Books Issued By Students" style="-fx-font-size:25; -fx-font-family:Consolas; -fx-text-fill:#E9E8E8;-fx-padding:30 0 0 0"/>
+      <TableView fx:id="table" style="-fx-background-color:#20262E;-fx-padding:20 20 20 20;" maxHeight="245">
+        <columns>
+            <TableColumn fx:id="Name" text="Book Name" style="-fx-text-fill:#E9E8E8;-fx-font-size:20;-fx-alignment:CENTER;-fx-background-color:#3795BD;-fx-font-family:Consolas;-fx-border-color:#20262E" prefWidth="306" resizable="false"/>
+            <TableColumn fx:id="Number" text="Book Number" style="-fx-text-fill:#E9E8E8;-fx-font-size:20;-fx-alignment:CENTER;-fx-background-color:#3795BD;-fx-font-family:Consolas;-fx-border-color:#20262E" prefWidth="306" resizable="false"/>            
+            <TableColumn fx:id="Student" text="Roll Number" style="-fx-text-fill:#E9E8E8;-fx-font-size:20;-fx-alignment:CENTER;-fx-background-color:#3795BD;-fx-font-family:Consolas;-fx-border-color:#20262E" prefWidth="306" resizable="false"/>
+        </columns>
+      </TableView>
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</VBox>
